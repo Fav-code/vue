@@ -1,12 +1,13 @@
 name: gcloud auth and yarn run & install 
 on: push
-environment: testing
-env:
-    GCP_PROJECT_ID: ${{ secrets.MONGODB_USERNAME }}
-    GCP_CREDENTIALS_JSON: ${{ secrets.MONGODB_PASSWORD }}
-    PORT: 8080
+
 jobs:
     test:
+        environment: testing
+        env:
+            GCP_PROJECT_ID: ${{ secrets.MONGODB_USERNAME }}
+            GCP_CREDENTIALS_JSON: ${{ secrets.MONGODB_PASSWORD }}
+            PORT: 8080
         runs-on: ubuntu-latest
         steps:
          - name: get the code
