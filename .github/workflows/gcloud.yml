@@ -1,11 +1,5 @@
 name: gcloud auth and yarn run & install 
-on:
-    push
-        branches:
-            - master
-            - feature1
-    path:
-        - '.github/workflows/*'
+on: push
 environment: testing
 env:
     GCP_PROJECT_ID: ${{ secrets.MONGODB_USERNAME }}
