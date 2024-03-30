@@ -1,6 +1,6 @@
 name: gcloud auth and yarn run & install 
 on:
-    push:
+    push
         branch:
             - master
             - feature1
