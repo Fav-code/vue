@@ -5,8 +5,8 @@ jobs:
     test:
         environment: testing
         env:
-            GCP_PROJECT_ID: ${{ secrets.MONGODB_USERNAME }}
-            GCP_CREDENTIALS_JSON: ${{ secrets.MONGODB_PASSWORD }}
+            GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+            GCP_CREDENTIALS_JSON: ${{ secrets.GCP_CREDENTIALS_JSON }}
             PORT: 8080
         runs-on: ubuntu-latest
         steps:
