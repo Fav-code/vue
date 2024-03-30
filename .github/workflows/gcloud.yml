@@ -16,8 +16,6 @@ jobs:
            uses: actions/setup-node@v3
          - name: Install Yarn
            run: npm install -g yarn
-         - name: install dependencies
-           run: npm ci
          - name: Authenticate with Google Cloud
            uses: google-github-actions/auth@v2
            with:
