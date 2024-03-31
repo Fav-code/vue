@@ -1,0 +1,32 @@
+name: Install Node JS and Yarn 
+on:
+  push:
+    branches:
+      - master
+      - feature1
+jobs:
+    test:
+        environment: testing
+        env:
+            GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+            GCP_CREDENTIALS_JSON: ${{ secrets.GCP_CREDENTIALS_JSON }}
+            PORT: 8080
+        runs-on: ubuntu-latest
+        steps:
+          - name: get the code
+            uses: actions/checkout@v3
+          - name: Authenticate with Google Cloud
+            uses: google-github-actions/auth@v2
+            with:
+              project_id: ${{ secrets.GCP_PROJECT_ID }}
+              credentials_json: ${{ secrets.GCP_CREDENTIALS_JSON }}
+          - name: Install node js
+            uses: actions/setup-node@v3
+          - name: setup python
+            run: npm install --global python2
+          - name: setup python
+            run: npm install --global python3
+          - name: Install yarn
+            run: npm install -g yarn
+          - name: yarn build
+            run: yarn install && yarn build
