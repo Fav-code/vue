@@ -23,7 +23,7 @@ jobs:
           - name: Install node js
             uses: actions/setup-node@v3
           - name: setup python
-            run: npm install python3
+            run: npm install --global python3
           - name: Install yarn
             run: npm install -g yarn
           - name: Yarn build
