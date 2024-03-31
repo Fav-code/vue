@@ -12,7 +12,6 @@ jobs:
         steps:
          - name: get the code
            uses: actions/checkout@v3
-
          - name: Authenticate with Google Cloud
            uses: google-github-actions/auth@v2
            with:
@@ -20,5 +19,5 @@ jobs:
             credentials_json: ${{ secrets.GCP_CREDENTIALS_JSON }}
          - name: Install node js
            uses: actions/setup-node@v3
-         - name: Install Yarn
+         - name: Install yarn
            run: npm install -g yarn
