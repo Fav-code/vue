@@ -98,6 +98,28 @@ Vue.js 3 will likely introduce breaking changes on how Vue.js applications will 
 > nvm use 16.13.0
 ```
 
+- Make sure you node-gyp installed globally
+```
+npm install -g node-gyp
+```
+
+- Make sure you have python installed on your machine
+MAC: 
+```
+brew install python
+export PYTHON=$(which python3)
+source ~/.zshrc # or ~/.bashrc depending on your shell
+```
+Windows: https://docs.python.org/3/install/windows.html
+Linux:
+```
+sudo apt update
+sudo apt install python3
+nano ~/.bashrc
+export PYTHON=$(which python3)
+source ~/.bashrc
+```
+
 ## Connect
 
 Join us on [Discord](https://discord.gg/NE2jNmg)
